@@ -13,6 +13,11 @@
   display: none;
 }
 
+html {
+      scroll-behavior: smooth;   
+      scroll-padding-top: 150px;  
+    }
+
 header{
     animation: fade 1s ease;
 }
@@ -104,11 +109,18 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: background 1s;
     outline: none;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.267);
+    transition: transform .6s ease;
 }
 .botao-ancora:hover{
     background-color: rgb(255, 255, 255);
     color: black;
     text-decoration: underline;
+    transform: scale(1.2);
+}
+
+.botao-ancora:active{
+    transform: translateY(-1px);    
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
 }
 
 #logar{
@@ -130,7 +142,7 @@ input[type="search"]::-webkit-search-cancel-button {
 #div01{
     font-family: var(--fonte01);
     margin-top: 170px;
-    margin-left: 25px;
+    margin-left: 30px;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.267);
 }
 
@@ -145,13 +157,15 @@ input[type="search"]::-webkit-search-cancel-button {
     font-weight: 500;
     width: 950px;
     margin-top: 10px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.267);
 }
 
 #valeri{
    width: 700px;
-   display:inline-block;
-   margin-left: 1060px;
-   margin-top: -225px;
+   display:block;
+   margin-right: 75px;
+   float: right;
+   margin-top: -400px;
    border-radius: 30px;
    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.541);
    outline-width: 3px;
@@ -164,10 +178,86 @@ input[type="search"]::-webkit-search-cancel-button {
     transform: scale(1.1);
 }
 
-.info{
-    font-weight: 600;
+.estatisticas{
+  font-family: var(--fonte01);
+  display: flex;
+  gap: 50px;
+  margin-left: 45px; 
+  margin-top: -55px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.267);
 }
 
-#fh3{
+.estatisticas div{
+  text-align: left;
+}
+
+.info{
+    font-weight: 400;
+    font-size: 28px;
+    margin-right: 20px;
+    margin-left: -15px;
+    margin-top: -60px;
+}
+
+.fh3{
+    font-size: 60px;
     font-weight: 900;
+    margin-left: 20px;
+    transition: transform .6s ease;
+}
+
+.fh3:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#Fh01{
+    margin-left: 45px;
+}
+
+#Fh02{
+    margin-left: 60px;
+}
+
+#explore{
+    font-family: var(--fonte01);
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    padding: 20px 30px;
+    margin-left: 300px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: transform .6s ease;
+}
+
+#explore:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#produto{
+    font-family: var(--fonte01);
+    font-size: 50px;
+    margin-top: 150px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.roupas{
+    outline: 1px black solid;
+    width: 20%;
+    padding: 70px;
+    margin: 50px;
+    height: 500px;
+    display: inline-block;
+    border-radius: 30px;
+    transition: transform .6s ease;
+}
+
+.roupas:hover{
+    transform: scale(1.1);
 }
